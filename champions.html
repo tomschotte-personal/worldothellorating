@@ -178,8 +178,7 @@ function render(){
     shown++;
     const years = p.years.split(',').map(s => s.trim()).filter(Boolean);
     const chips = years.map(y => '<span class="yr' + (+y >= Y1-5 ? ' recent':'') + '">' + esc(y) + '</span>').join('');
-    let badge = p.remark ? '<span class="badge ' + esc(p.remark) + '">' + esc(p.remark) + '</span>' : '';
-    if (reignOnly) badge += '<span class="badge reigning">since ' + lastEdition(p.country) + '</span>';
+    const badge = p.remark ? '<span class="badge ' + esc(p.remark) + '">' + esc(p.remark) + '</span>' : '';
     rows.push('<div class="row">' +
       '<div class="rank' + (p.rank<=3?' podium':'') + '">' + p.rank + '</div>' +
       '<div class="disc">' + p.n + '</div>' +
