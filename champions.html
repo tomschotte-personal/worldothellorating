@@ -84,7 +84,8 @@ table.ct td.num{text-align:right;font-weight:600;}
 .spanbar{position:relative;height:10px;background:var(--chip);border-radius:5px;overflow:hidden;}
 .spanbar b{position:absolute;top:0;bottom:0;background:var(--felt);border-radius:5px;opacity:.35;}
 .axis{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);
-  padding:2px 8px 0;font-variant-numeric:tabular-nums;}
+  padding:2px 0 0;font-variant-numeric:tabular-nums;}
+.ct tfoot td{border:none;padding:2px 8px;}
 footer{margin-top:46px;padding-top:14px;border-top:1px solid var(--line);
   color:var(--muted);font-size:12.5px;}
 @media(max-width:560px){
@@ -135,9 +136,11 @@ the individual years are not recorded in the source.</p>
 <table class="ct" id="ctable">
   <thead><tr><th>Country</th><th style="text-align:right">Editions</th><th>First</th><th>Last</th><th class="span-cell">History</th></tr></thead>
   <tbody></tbody>
+  <tfoot><tr><td colspan="4"></td>
+    <td class="span-cell"><div class="axis"><span>1974</span><span>2000</span><span>2026</span></div></td>
+  </tr></tfoot>
 </table>
 </div>
-<div class="axis"><span>1974</span><span>2000</span><span>2026</span></div>
 
 <footer>Source: World Othello Federation records, maintained by the WOF rating committee.
 Resident and visitor badges mark champions who won a title outside their home federation.</footer>
